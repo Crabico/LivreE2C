@@ -1,0 +1,22 @@
+p{
+    color:#fcffd6;
+    font-size: 1.5rem;
+ 
+    }
+
+    @font-face {
+        font-family: dergo;
+        src: url(./dirty_ego/DIRTYEGO.TTF);
+    }
+    
+
+body{
+    background-color: #36230c;
+    font-family: dergo;
+    
+}
+header{
+    color: #36230c;
+    font-size: 4rem;
+    background-color: #fcffd6;
+}
