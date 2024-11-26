@@ -109,9 +109,11 @@ align-items: end;
         background-color: #8b9f54;
         color: #F1F1D3;
         position: fixed;
+        left: calc(-30vh - 1vh);
         top: 20vh;
         margin-left: 0%;
         z-index: 5;
+        transition: 1s;
     }
 
     .bouton {
@@ -134,3 +136,28 @@ align-items: end;
         color: #F1F1D3;
         border: #F1F1D3 solid 4px; 
     }
+
+    #trigger {
+    position: fixed;
+    top: 25vh;
+    width: 5vh;
+    aspect-ratio: 1;
+    background-color: #8b9f54;
+    border-radius: 0 10px 10px 0;
+    background-image: url('../assets/icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    #close {
+        position: relative;
+        top: -7vh;
+        left: 10vh;
+        width: 5vh;
+        aspect-ratio: 1;
+        background-color: #8b9f54;
+        border-radius: 0 10px 10px 0;
+        background-image: url(../assets/crossicon.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
