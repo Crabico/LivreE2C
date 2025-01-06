@@ -1,26 +1,54 @@
+<?php 
+$isLogged = true;
+$title = "Silence on lit à l'E2C";
+$subtitle = "Lire c'est bien";
+
+$navButtons = [/*"Accueil", "Bibliothèque", "Espace détente", "Qui sommes nous"*/ 
+[
+    "label" => "Accueil", 
+    "path" =>"../controller/homeController.php"
+],
+
+[
+    "label" => "Bibliothèque", 
+    "path" =>"../controller/libraryController.php"
+],
+
+[
+    "label" => "Espace détente", 
+    "path" =>"../controller/gameController.php"
+],
+
+[
+    "label" => "Qui sommes nous", 
+    "path" =>"../controller/usController.php"
+],
+
+];
+if($isLogged) {
+    $navButtons[]= [
+        "label" => "Mon compte",
+        "path" => "../conntroller/accountController.php"
+    ];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silence On Lit</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="module" src="../jscript/nav.js"></script>
 </head>
 <body> 
- <header>
-    <img src="./assets/logo.png" alt="logo" id="logolivre">
-<div id="titre">
-    <h1>Silence, on lit à <a href="https://e2c-grandlille.fr/" target="_blank">l'E2C</a> !</h1>
-    <h2>Explorez votre imagination !</h2>
-</div>
-</header> 
-<nav>
-   <a href="./index.htm" class="bouton"> <strong>Accueil</strong></a>
-   <a href="./pages/library.htm"class="bouton"> <strong>Biblihotèque</strong></a>
-   <a href="./pages/game.htm"class="bouton"> <strong>Espace détende</strong></a>
-   <a href="./pages/us.htm"class="bouton"> <strong>Qui sommes-nous ?</strong> </a>
+ 
+<?php 
+require_once("../module/_header.php");
+require_once("../module/_nav.php");
+?>
 
-</nav>
 
     <main>
         <article>
@@ -99,6 +127,7 @@
 <p>En conclusion, le dispositif <em>" Silence, on lit "</em> est une initiative précieuse qui offre aux jeunes l’occasion de se développer personnellement et intellectuellement. En favorisant la lecture, il contribue à renforcer leurs compétences scolaires et professionnelles, tout en cultivant leur imagination et leur curiosité. Dans un monde où la lecture semble parfois reléguée au second plan face aux technologies, ce dispositif constitue un levier puissant pour redonner aux jeunes le goût de lire et les préparer à relever les défis de demain.</p>
 </article>
 </main>
+<div id="trigger"></div>
 </body>
 </html>
 
