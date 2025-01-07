@@ -48,13 +48,27 @@ hl {
     }
 
     #titre {
-   display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    width: 60%;
     margin-right: 10%;
     }
+
+
+    #LogForm {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #F1F1D3;
+    }
+
+
+
+
+
     main {
         padding: 2%;
         display: flex;
@@ -96,7 +110,7 @@ align-items: end;
     #image>h2 {
         font-size: 5rem;
         padding-right: 2vw;
- color: #F1F1D3;
+        color: #F1F1D3;
     }
 
     nav {
@@ -137,6 +151,8 @@ align-items: end;
         border: #F1F1D3 solid 4px; 
     }
 
+
+
     #trigger {
     position: fixed;
     top: 25vh;
@@ -153,11 +169,38 @@ align-items: end;
         position: relative;
         top: -7vh;
         left: 10vh;
-        width: 5vh;
+        width: 3vh;
+        height: 3vh;
         aspect-ratio: 1;
         background-color: #8b9f54;
         border-radius: 0 10px 10px 0;
         background-image: url(../assets/crossicon.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         }
+
+     
+
+
+
+    /* formulaire de connection */
+
+        #login-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+
+            .form-line {
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+                margin: 6px;
+            }
+
+            .form-line>* {
+                display: block;
+            }
